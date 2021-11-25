@@ -1,0 +1,45 @@
+<?-- Create a registration form Program - 4 -->
+<html>
+<head>
+	<title>Registration form</title>
+</head>
+<body bgcolor="lightblue">
+	<h1 align="center">REGISTRATION FORM</h1>
+
+	<form>
+		<label>First name:</label>
+		<input type="text" name="firstname"/>
+		
+		<br><br>
+		<label>Last name:</label>
+		<input type="text" name="lastname"/>
+
+		<br><br>
+		<input type="radio" name="sex" value="male">Male</input>
+		<input type="radio" name="sex" value="female">Female</input>
+
+		<br><br>
+		<label>Address:</label>
+		<br><textarea></textarea>
+
+		<br><br>
+		<label>Qualification</label>
+		<select name="qual" id="qual">
+			<option value="MCA">MCA</option>
+			<option value="INMCA">INMCA</option>
+			<option value="BBA">BBA</option>
+			<option value="MBA">MBA</option>
+		</select>
+
+		<br><br>
+		<label>Programming skills</label><br>
+		<input type="checkbox" name="pr" value="c">C</input><br>
+		<input type="checkbox" name="pr" value="c++">C++</input><br>
+		<input type="checkbox" name="pr" value="java">Java</input><br>
+		<input type="checkbox" name="pr" value="python">Python</input><br>
+		<input type="checkbox" name="pr" value="html">HTML</input><br><br>
+
+		<input type="submit">SUBMIT</input>
+	</form>
+</body>
+</html>
