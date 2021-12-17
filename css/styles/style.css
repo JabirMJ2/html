@@ -23,6 +23,9 @@ ul li:first-child{
 .text-light{
 	color: #777;	
 }
+.text-light *:hover{
+	color:#e1516c;
+}
 .sz-screen{
 	width: 100vw;
 	height: 100vh;
@@ -100,3 +103,11 @@ button{
 .icons{
 	width:28px;
 }
+
+.bg-primary:hover{
+	background:#e1516c;
+}
+.absolute{
+	position: absolute;
+}
+
