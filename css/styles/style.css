@@ -1,0 +1,102 @@
+*{
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+}
+.sz-logo{
+	height:24px;
+}
+
+ul{
+	list-style:none;
+	display: flex;
+}
+ul li{
+	margin-left:10px;
+}
+ul li:first-child{
+	margin-left:0px;
+}
+.text-xs{
+	font-size: .75rem;
+}
+.text-light{
+	color: #777;	
+}
+.sz-screen{
+	width: 100vw;
+	height: 100vh;
+}
+.w-50{
+	width: 50%;	
+}
+.p-10{
+	padding: 25px;
+}
+.flex{
+	display: flex;
+}
+.justify-between{
+	justify-content: space-between;
+}
+.text-center{
+	align-items:center;
+}
+.h-full{
+	height: 100%;
+}
+.fixed{
+	position: fixed;
+}
+.top-0{
+	top: 0;
+}
+.w-full{
+	width:100%;
+}
+.mt-10{
+	margin-top: 20px;
+}
+.text-lg{
+	font-size: 1.5rem;
+}
+.bg-primary{
+	background: #db3655;
+}
+.text-primary{
+	color: #db3655;
+}
+.font-bold{
+	font-weight: bold;
+}
+.font-italic{
+    font-style: italic;
+}
+.text-white{
+	color: white;
+}
+button{
+	border: 0;
+}
+.p-2{
+	padding: 5px;
+}
+.px-5{
+	padding-right: 8px;
+	padding-left: 8px;
+}
+.rounded{
+	border-radius:5px;
+}
+.p-30{
+	padding: 80px;
+}
+.pointer{
+	cursor: pointer;
+}
+.bottom-0{
+	bottom:0;
+}
+.icons{
+	width:28px;
+}
