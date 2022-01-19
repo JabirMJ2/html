@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>
+Prime number within range
+</title>
+</head>
+<body>
+<script>
+var first=0, second=1;
+limit=parseInt(prompt("Enter the limit"));
+
+if(limit<0) document.write("The given no is invalid");
+
+if(limit>=1) document.write(first,"<br>");
+
+if(limit>=2) document.write(second, "<br>");
+
+for(i=1; i<limit; i++){
+	first=second;
+	second=first+second;
+	document.write(second, "<br>");
+}
+</script>
+</body>
+</html>

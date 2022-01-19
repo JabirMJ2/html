@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>
+Prime number within range
+</title>
+</head>
+<body>
+<script>
+var start, end, count;
+start=parseInt(prompt("Enter the start"));
+end=parseInt(prompt("Enter the end"));
+
+document.write(`Prime nos between ${start} and ${end} \n`);
+
+for(i=start; i<=end; i++){
+	count=0;
+	for(j=2; j<i; j++){
+		if(i%j==0){
+			count=count+1;
+		}	
+	} 
+	if(count==0) document.write(`<br>${i}`);
+} 
+</script>
+</body>
+</html>
