@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>
+Even numbers btw range
+</title>
+</head>
+<body>
+<script>
+	n = +prompt("Enter the number")
+	
+	temp = n
+
+	// get armstrong sum
+	let sum=0, last;
+	while(n>0){
+		last = n % 10;
+		sum = sum + (last**3)
+		n = Math.floor(n/10)
+	}
+	if(temp == sum)
+	{
+		document.write(`${temp} is amstrong`)
+	}
+	else document.write(`${temp} is not amstrong`)
+
+	
+</script>
+</body>
+</html>

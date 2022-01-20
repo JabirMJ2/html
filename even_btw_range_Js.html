@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>
+Even numbers btw range
+</title>
+</head>
+<body>
+<script>
+	start = +prompt("Enter the starting");
+	end = +prompt("Enter the end");
+	
+	document.write(`Even numbers between ${start} and ${end}<br>`)
+	// check and print even nos
+	for(i=start; i<=end; i++){
+		if(i%2==0) document.write(`${i} <br>`)
+	}
+</script>
+</body>
+</html>

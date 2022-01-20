@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>
+Reverse, Palindrome, Sum of digit
+</title>
+</head>
+<body>
+<script>
+	//reverse function
+	function reverse_sum(n){
+		let rev=0, sum=0, last;
+		while(n>0){
+			last = n % 10;
+			rev = rev * 10 + last;
+			sum = sum + last
+			n = Math.floor(n/10);
+		}
+		return [rev, sum];
+	}
+	
+	// input the number
+	let number = parseInt(prompt("Enter the number"));
+	
+	let [rev_loc, sum_loc]= reverse_sum(number);
+
+	// reverse of the number
+	document.write(`reverse of the number is: ${rev_loc} <br>`);
+
+	// palindrome check
+	if(number==rev_loc) document.write(`${number} is a palindrome <br>`);
+	else document.write(`${number} is not a palindrome <br>`);
+
+	// sum of digits
+	document.write(`Sum of digits: ${sum_loc}`);
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>
+Even numbers btw range
+</title>
+<style>
+	#myImage{
+		height: 510px;
+		width: 510px;
+	}
+	.block{
+		margin:auto;
+		display: block;
+		margin-top: 10px;
+	}
+</style>
+</head>
+<body align="center">
+		<h1>Swapping image with Js</h1>
+		<br>
+		
+		<img id="myImage" src="pic1.jpg"/>
+		<button class="block" onclick="toggle()">Toggle</button>
+		
+<script>
+	function toggle(){
+		fullpath = document.querySelector("#myImage").src;
+		var n = fullpath.lastIndexOf('/')
+		var src = fullpath.substring(n+1)
+		
+		document.querySelector("#myImage").src = (src=='pic1.jpg') ? 'pic2.png' : 'pic1.jpg'
+	}
+</script>
+</body>
+</html>
