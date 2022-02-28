@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Internal CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100vw;
+            padding: .5rem 10rem;
+            font-size: 1rem;
+            position: fixed;
+            background-color: white;
+            border: 1px solid #efefef;
+            box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.38);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            padding: 0.5rem;
+        }
+        
+        nav a {
+            color: darkcyan;
+            text-decoration: none;
+        }
+        
+        nav button {
+            padding: 0 0.5rem;
+            height: 30px;
+            width: 90px;
+            background: none;
+            border-radius: 5px;
+            border: .5px solid darkcyan;
+        }
+        
+        main {
+            height: 100vh
+        }
+        
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background: darkcyan;
+        }
+        
+        .title {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h3>Jabir MJ</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+            <button>Sign In</button>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1 class="title">Welcome to My Webpage</h1>
+        </div>
+    </main>
+
+</body>
+
+</html>

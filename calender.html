@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Calendar</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        
+        td,
+        th {
+            border: 1px dashed black;
+            padding: 3px;
+            text-align: center;
+        }
+        
+        th {
+            font-weight: bold;
+            background-color: darkcyan;
+        }
+        
+        #calendar {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 10px;
+            margin-top: 10px;
+        }
+        
+        button {
+            color: white;
+            border: 0;
+            background-color: darkcyan;
+            border-radius: 5px;
+            padding: 8px 20px;
+        }
+        
+        input {
+            border-radius: 5px;
+            padding: 7px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <b><h2><u><center><font color="orange">CALENDAR</u></center></h2></font></b>
+        <br><label>Enter The year </label><br><input type="number" name="year" id="year" placeholder="e.g. 2021" />
+
+        <button type="button" onclick="run(event);">Create</button>
+        <div id="calendar">
+        </div>
+    </main>
+    <script>
+        const months = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+
+        function getDay(date) {
+            let day = date.getDay();
+            if (day == 0) day = 7;
+            return day - 1;
+        }
+
+        function createCalendar(elem, year, month) {
+            let mon = month - 1;
+            let d = new Date(year, mon);
+            let table = '<table><tr><th  colspan="7" align="center">' + months[month - 1] + '</th></tr><tr><th>MON</th><th>TUE</th><th>WED</th><th>THU</th> <th> FRI </th><th>SAT</th> <th> SUN </th></tr> <tr> ';
+            console.log(getDay(d), d.getDate(), d.getMonth())
+            for (let i = 0; i < getDay(d); i++) {
+                table += '<td></td>';
+            }
+            while (d.getMonth() == mon) {
+                table += '<td>' + d.getDate() + '</td>';
+                if (getDay(d) % 7 == 6) {
+                    table += '</tr><tr>';
+                }
+                d.setDate(d.getDate() + 1);
+            }
+            while (d.getDay() % 7 != 0) {
+                table += "<td> </td>";
+                d.setDate(d.getDate() + 1);
+            }
+            if (d.getDay() % 7 > -1) {
+                table += "<td> </td></tr>";
+            }
+
+            table += '</tr></table>';
+            elem.innerHTML += table;
+        }
+
+        function run(e) {
+            e.preventDefault();
+            var year = document.getElementById("year").value;
+            var calender = document.getElementById("calendar");
+            calender.innerHTML = "";
+            for (i = 1; i <= 12; i++)
+                createCalendar(calendar, year, i);
+        }
+    </script>
+</body>
+
+</html>

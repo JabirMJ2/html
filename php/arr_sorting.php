@@ -24,7 +24,7 @@ function ArraySort($a)
     }
 foreach($a as $i)
 {
- echo "$i";
+ echo "$i ";
 }
 }
 ?>
