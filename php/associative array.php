@@ -1,3 +1,4 @@
+<!-- Create a associative array with values and sort in ascending and descending order -->
 <html>
 <body>
 <?php
